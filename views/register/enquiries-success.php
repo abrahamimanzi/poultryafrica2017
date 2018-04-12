@@ -1,0 +1,93 @@
+<form method="post" class="form-horizontal">
+<section class="reg-body open">
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+              <?php
+                $process = Input::get('process');
+                if($process != 'accommondation'){
+                  ?>
+                                      
+
+                    <div class="panel panel-reg">
+                        <div class="reg-header">
+                            <h2 class="text-center reg-title" style="text-transform: uppercase;">
+                            Enquiries
+                            </h2>
+                        </div>
+                        
+                        <div class="panel-body" style="padding: 5px 30px 15px 30px;">
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                  <br>
+                                  <p class="fieldset-header text-center" style="line-height: 25px; font-size: 15px">
+                                      <span class="ro_bold"> Thank you for submitting your enquiry.  Our team will get back to you shortly. </span>
+                                   
+
+                                    
+
+                                  </p><br>
+                                 <hr class="halfLine">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                                
+                              <div class="col-sm-12 text-center">
+                                  <span class=""><a href="<?=DN?>" class="btn btn-default"><i class="glyphicon glyphicon-remove"></i> Done</a></span>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <?php
+                  }else{ ?>
+
+                    <div class="panel panel-reg">
+                        <div class="reg-header">
+                            <h2 class="text-center reg-title" style="text-transform: uppercase;">
+                            <?php
+                                  echo 'ACCOMMODATION REGISTRATION SUCCESSFUL';
+                                ?>
+                            </h2>
+                        </div>
+                        
+                        <div class="panel-body" style="padding: 5px 30px 15px 30px;">
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                  <br>
+                                  <p class="fieldset-header text-center" style="line-height: 25px; font-size: 15px">
+                                        
+
+                                          <span class="ro_bold" style="font-size: 15px"> </span>Thank you for submitting your hotel reservation for Transform Africa Summit<br> (Kigali, Rwanda, 10 - 12 May 2017).<br>
+                                          
+                                          We will review your reservation and an email notification will be sent to you shortly.
+
+                                               
+
+
+                                    
+
+                                  </p><br>
+                                 <hr class="halfLine">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                                
+                              <div class="col-sm-12 text-center">
+                                  <span class=""><a href="<?=DN?>" class="btn btn-default"><i class="glyphicon glyphicon-remove"></i> Done</a></span>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                  }
+                  ?>
+                </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+</section>
+</form>

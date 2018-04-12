@@ -1,0 +1,101 @@
+# Turn Rewrite Engine On
+RewriteEngine on
+ErrorDocument 404 /poultryafrica2017/404
+ErrorDocument 500 /poultryafrica2017/maintenance
+Options -Indexes
+
+
+ RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# Set The post page
+
+#-----------------------------------------------#
+# Set Register page
+ 
+ #RewriteRule ^register(/*)$ 404.php
+ #RewriteRule ^register/silver(/*)$ 404.php
+ #RewriteRule ^register/gold(/*)$ 404.php
+ RewriteRule ^register/platinum(/*)$ 404.php
+ #RewriteRule ^register/visitor(/*)$ 404.php
+ #RewriteRule ^register/government(/*)$ 404.php
+ RewriteRule ^register/facethegorillas(/*)$ ftg-register.php
+ #RewriteRule ^register/msgeek(/*)$ msgeek-register.php
+ RewriteRule ^register/facethegorillas/([a-zA-Z0-9-]+)/([a-z]+)(/*)$ ftg-success.php?id=$1&process=$2
+ 
+#-----------------------------------------------#
+# Set Register page
+#-----------------------------------------------#
+ 
+ RewriteRule ^register/([a-zA-Z]+)(/*)$ registration.php?categ=$1   
+ RewriteRule ^register/([a-zA-Z]+)/([a-zA-Z]+)(/*)$ registration.php?categ=$1&passtype=$2
+ RewriteRule ^register/([a-zA-Z]+)/([a-zA-Z0-9-]+)(/*)$ registration.php?categ=$1&passtype=$2
+ RewriteRule ^register/([a-z0-9]+)/([a-z0-9]+)(/*)$ registration.php?token=$1&invite_code=$2
+ 
+ 
+ 
+#-----------------------------------------------#
+# Set Payment page
+#-----------------------------------------------#
+ RewriteRule ^payment/([a-zA-Z0-9-]+)(/*)$ payment.php?id=$1
+ RewriteRule ^payment/([a-zA-Z0-9-]+)/([a-z]+)(/*)$ payment.php?id=$1&test=$2
+ RewriteRule ^payment/([a-z]+)/([a-zA-Z0-9-]+)(/*)$ payment.php?request=$1&id=$2
+ RewriteRule ^payment-([a-z]+)/([a-z]+)/([a-zA-Z0-9-]+)(/*)$ payment.php?request=$2&id=$3&currency=$1
+ 
+#-----------------------------------------------#
+# Set Print page
+#-----------------------------------------------#
+ RewriteRule ^receipt-single/([a-zA-Z0-9-]+)(/*)$ printreceipt_single.php?id=$1
+ RewriteRule ^receipt-group/([a-zA-Z0-9-]+)(/*)$ printreceipt.php?reference=$1
+ RewriteRule ^print-forms/([a-zA-Z0-9-]+)(/*)$ printforms.php?id=$1
+ RewriteRule ^print-badge/([a-zA-Z0-9-]+)(/*)$ printbadge.php?id=$1
+ 
+#-----------------------------------------------#
+# Set Success page
+#-----------------------------------------------#
+ RewriteRule ^success/([a-zA-Z0-9-]+)/([a-zA-Z]+)(/*)$ success.php?id=$1&process=$2
+ RewriteRule ^success/([a-zA-Z0-9-]+)(/*)$ success.php?process=$1
+
+#-----------------------------------------------#
+# Set Booking page
+#-----------------------------------------------#
+ #RewriteRule ^accomodation/([a-zA-Z0-9-]+)/([a-zA-Z]+)(/*)$ success.php?id=$1&process=$2
+ 
+ 
+#-----------------------------------------------#
+# Set Login pages
+#-----------------------------------------------#
+
+ RewriteRule ^login(/*)$ login.php?request=login
+ RewriteRule ^login/([a-z]+)(/*)$ login.php?request=$1
+ RewriteRule ^login/([a-z]+)/([a-z]+)(/*)$ login.php?request=$1&response=$2
+ RewriteRule ^login/([a-z]+)/([0-9A-Z]+)(/*)$ login.php?request=$1&response=$2
+ RewriteRule ^login/([a-z]+)/([0-9]+)/([0-9A-Z]+)(/*)$ login.php?request=$1&id=$2&code=$3
+ 
+#-----------------------------------------------#
+ 
+ 
+#-----------------------------------------------#
+# Set LOGGED IN
+
+ 
+#-----------------------------------------------#
+# Set Apps page
+#-----------------------------------------------#
+
+ RewriteRule ^net(/*)$ gino.php?request=$1
+ RewriteRule ^net/([a-z]+)(/*)$ gino.php?request=$1
+ RewriteRule ^net/([a-zA-Z0-9]+)(/*)$ gino.php?request=$1
+ RewriteRule ^net/([a-zA-Z0-9]+)/([a-z]+)(/*)$ gino.php?request=$1&trunk=$2
+ RewriteRule ^net/([a-zA-Z0-9]+)/([a-z]+)/([0-9]+)(/*)$ gino.php?request=$1&trunk=$2&id=$3
+ RewriteRule ^net/([a-zA-Z0-9]+)/([a-z]+)/([a-z-]+)(/*)$ gino.php?request=$1&trunk=$2&branch=$3
+ RewriteRule ^net/([a-zA-Z0-9]+)/([0-9]+)/([a-z-]+)(/*)$ gino.php?request=$1&trunk=home&id=$2&branch=$3
+ RewriteRule ^net/([a-zA-Z0-9]+)/([0-9]+)/([a-z-]+)/([a-zA-Z0-9]+)(/*)$ gino.php?request=$1&trunk=home&id=$2&branch=$3&iditem=$4
+ RewriteRule ^net/([a-zA-Z0-9]+)/([0-9]+)/([a-z-]+)/([a-z]+)/([a-zA-Z0-9]+)(/*)$ gino.php?request=$1&trunk=home&id=$2&branch=$3&search=$4
+ 
+ 
+#-----------------------------------------------#
+
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php

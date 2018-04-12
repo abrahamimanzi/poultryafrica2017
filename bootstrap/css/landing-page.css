@@ -1,0 +1,573 @@
+/*
+TRANSFORM AFRICA |  Html5 Responsive Website
+Author URI: http://www.cube.rw/
+*/
+@font-face {
+    font-family: Gotham Light;
+    src: url(../fonts/Gotham-light.ttf);
+}
+@font-face {
+    font-family: Gotham Book;
+    src: url(../fonts/Gotham-book.ttf);
+}
+@font-face {
+    font-family: Gotham Bold;
+    src: url(../fonts/Gotham-bold.ttf);
+}
+@font-face {
+    font-family: Gotham Medium;
+    src: url(../fonts/Gotham-medium.ttf);
+}
+@font-face {
+    font-family: Gotham Black;
+    src: url(../fonts/Gotham-black.ttf);
+}
+@font-face {
+    font-family: Avalon Bold;
+    src: url(../fonts/Avalon_Bold.ttf);
+}
+@font-face {
+    font-family: Montserrat Bold;
+    src: url(../fonts/Montserrat-Bold.otf);
+}
+@font-face {
+    font-family: Montserrat Regular;
+    src: url(../fonts/Montserrat-Regular.otf);
+}
+body,
+html {
+    width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Gotham Bold",sans-serif;
+    text-transform: uppercase;
+}
+h2{
+    margin-bottom: 15px!important
+}
+body, p{
+    font-family: "Gotham Light",sans-serif;
+    color: #1c4587;
+}
+h4,
+h5,
+h6 {
+    color: rgba(255, 144, 22, 1);
+    text-transform:inherit;
+}
+h3 strong{
+    font-family: "Gotham Bold",sans-serif;
+}
+.navbar-default{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(255,255,255,1);
+    border-color: rgba(255,255,255,1);
+    font-family: "Gotham Bold",sans-serif;
+}
+.navbar-brand > img{
+    width: 200px;
+    position: relative;
+    top: -18pt;
+    padding: 5pt;
+    border-radius:3pt;
+}
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav li:hover{
+    background: transparent;
+    color: rgba(255, 144, 22, 1);;
+    border: 0 none;
+}
+.btn-lg{
+    padding: 14px 16px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.transhr {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 0.6pt solid rgba(255, 144, 22, 1);
+}
+.btn-default{
+    color: #1c4587;
+    background: #ffff;
+    border: 0.5pt solid #1c4587;
+}
+.btn-default:hover{
+    color: rgba(255, 144, 22, 1);
+    background: #1c4587;
+    border: 0.5pt solid #1c4587;
+}
+.btn-primary.active{
+     color: #1c4587; 
+     background-color: transparent; 
+     border-color: transparent;
+     border-radius: 0;
+}
+.text{
+    background: #f78e20;
+    color: #fff;
+    padding: 6pt; 
+    display: inline-block;
+    width: 200px;
+    height: 400px;
+    margin-top: -465px;
+    position: relative;
+    float:right;
+    -webkit-transition-property: width; /* Safari */
+    -webkit-transition-duration: 1s; /* Safari */
+    -webkit-transition-delay: 1s; /* Safari */
+    transition-property: width;
+    transition-duration: 1s;
+    transition-delay: 1s;
+}
+.text:hover{ 
+    width: 550px;
+}
+.navbar-default .navbar-nav>li>a{
+    color: #1c4587;
+    text-transform: uppercase;
+}
+.topnav {
+    font-size: 16px; 
+/*    min-height: 80px;   */
+    padding: 10px;
+}
+.control-label{
+    text-transform: capitalize;
+}
+.dropdown-menu>li>a{
+    display: block;
+    padding: 10px 20px;
+    clear: both;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #1c4587;
+    white-space: nowrap;
+    border-bottom: 1px solid #ddd
+}
+.dropdown-menu>li>a:hover,
+.dropdown-menu>li.active>a,
+.dropdown-menu>li.active>a:hover{
+    color: rgba(255, 144, 22, 1);
+    background-color: transparent;
+}
+
+.navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:focus, 
+.navbar-default .navbar-nav>.open>a:hover{
+    background: transparent;
+    color: rgba(255, 144, 22, 1)!important;
+}
+ul.dropdown-menu.dropdown-menu-left{
+    margin-top: 20px;
+    margin-left: 15px
+}
+
+.navbar-nav>li.active:Hover,
+.navbar-nav>li.active{
+    border-bottom: 1px solid rgba(255, 144, 22, 1);
+}
+
+.btn-primary{
+    text-transform: uppercase;
+    background-color: transparent; 
+    color: #1c4587;
+    border: 0 none;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover{
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 0 none;
+    color: #1c4587;
+}
+.lead {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.intro-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../img/kgl.jpg) no-repeat center center;
+    background-size: cover;
+    background-color: rgba(0,0,0,1);
+}
+
+.intro-message {
+    position: relative;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+.intro-message > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 4em;
+    font-family: "Gotham Bold", sans-serif;
+}
+.intro-message > h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 3.5em;
+    color: rgba(255, 144, 22, 1);
+    font-family: "Gotham Light", sans-serif;
+}
+.intro-message > h3 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 2.6em;
+    font-family: "Gotham Light", sans-serif;
+}
+
+.intro-divider {
+    width: 70%;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-message > h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+.ul-right{
+    padding-left: 20px;
+    border-left: 3px solid rgba(255, 144, 22, 1);
+    list-style: none;
+    color: #1c4587;
+}
+
+@media(max-width:767px) {
+    .intro-message {
+        padding-bottom: 15%;
+    }
+
+    .intro-message > h1 {
+        font-size: 3em;
+    }
+    .intro-message > h2 {
+        font-size: 2em;
+    }
+    .intro-message > h3 {
+        font-size: 1.5em;
+    }
+    ul.intro-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.intro-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .intro-divider {
+        width: 100%;
+    }
+    .navbar-brand > img{
+        width: 130px;
+        top: -14pt;
+    }
+    .section-heading{
+        font-size: 1.7em;
+    }
+    .ul-right{
+        padding-left: 0;
+        border-left: 0 none;
+    }
+}
+
+.network-name {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: "Gotham Book", sans-serif;
+    letter-spacing: 1.3px;
+}
+
+.content-section-a {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.content-section-b {
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading-spacer {
+    float: left;
+    width: 200px;
+    border-top: 3px solid #e7e7e7;
+}
+
+.banner {
+/*
+    padding: 100px 0;
+    color: #f8f8f8;
+    background: url(../img/tran.jpg) no-repeat center center;
+    background-size: cover;
+*/
+}
+
+.banner h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 3em;
+}
+
+.banner ul {
+    margin-bottom: 0;
+}
+
+.banner-social-buttons {
+    float: right;
+    margin-top: 0;
+}
+
+@media(max-width:1199px) {
+    ul.banner-social-buttons {
+        float: left;
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:767px) {
+    .banner h2 {
+        margin: 0;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+        font-size: 3em;
+    }
+
+    ul.banner-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+footer {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+p.copyright {
+    margin: 15px 0 0;
+}
+.lightSlider >li img{
+    min-height: 440px;
+    height: 450px;
+}
+.lightSlider > li {
+    position: relative;
+}
+.caption {
+    background-color: rgba(0, 0, 0, 0.01);
+    height: 85px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    color: white;
+    width: 100%;
+}
+.caption p {
+    margin:5pt;
+}
+
+/* 5. Countdown */
+#countdown {
+	display: block;
+	overflow: hidden;
+	margin-top: 100px;
+}
+#countdown .dash-table {
+	padding: 0 0;
+}
+#countdown .dash {
+    color: darkblue;
+	background: rgba(255, 255, 255, 0.7);
+/*	background: rgba(255, 144, 22, 0.6);*/
+	position: relative;
+	margin: 5px 5px;
+	padding: 0 0 5px 0;
+}
+#countdown .digit {
+	height: 76px;
+	font-family: "Gotham Bold", sans-serif;
+    font-size: 3em;
+	color: #1c4587;
+	line-height: 96px;
+	font-weight: 100;
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	vertical-align: middle;
+}
+#countdown .dash_title {
+	font-size: 16px;
+	width: 100%;
+	color: #1c4587;
+	display: block;
+	clear: both;
+}
+
+.ul-layout{
+    margin-left: 0px; 
+    padding-left: 0px;
+    padding-right: 20px;
+    list-style: none;
+    color: #1c4587;
+}
+.ul-layout li, .ul-right li{
+    padding: 6px 0;
+    line-height: 1.6;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 0.35em 0;
+  padding: 0.35em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 5em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+  font-size: 16px;
+}
+blockquote span {
+  display: block;
+    font-size: 13px;
+    color: #999;
+}
+
+.intl-tel-input+.intl-tel-input{
+    margin-left: 25px;
+}
+
+@media(max-width: 700px){
+.intl-tel-input+.intl-tel-input{
+    margin-left: 0px;
+    margin-top: 20px;
+    }
+}
+
+.form-control {
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #d2d6de;
+}
+
+
+.btn-default{
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    padding: 12px 15px 8px 15px;
+    background-image: linear-gradient(to right, #f3f3f3, #fff, #f3f3f3);
+}
+
+.contact_panel{
+    border-radius: 0px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 3px rgba(0,0,0,.1);
+}
+
+
+.contact_panel .panel-heading{
+/*    border-radius: 4px;*/
+/*    background-image: linear-gradient(to right, #f3f3f3, #fff, #f3f3f3);*/
+}
+
+.contact_panel .panel-body{
+/*    padding: 30px*/
+}
+.contact_panel .control-label{
+    text-align: left;
+}
+
+.contact_panel input{
+    font-size: 13px;
+    padding-top: 9px;
+}
+.contact_panel textarea{
+    padding-left: 35px;
+    padding-right: 35px;
+    color: #000
+}
+.contact_list li{
+    padding-bottom: 10px;
+    display: block;
+}
+.contact_list li .fa{
+    color: rgba(255, 144, 22, 1);;
+}
+
+.contact_panel input:focus,
+.contact_panel select:focus,
+.contact_panel textarea:focus,
+.contact_panel input:focus{
+    outline: none!important;
+    outline-width: 0!important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+    color: #aaa
+}
+.inner-addon .fa {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+    color: #aaa
+}
+
+/* align icon */
+.left-addon .fa  { left:  0px; top: -2px}
+.right-addon .fa { right: 0px;}
+
+.left-addon .glyphicon  { left:  0px; top: -2px}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  35px; }
+.right-addon input { padding-right: 35px; }

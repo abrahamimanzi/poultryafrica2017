@@ -1,0 +1,152 @@
+<?php include 'admin/core/init.php';?>
+<?php
+$success = false;
+$error = false;
+$nosubNav = true;
+
+if(isset($_POST['register_submited'])){
+    $prfx = 'register-';
+    $get_str = "?webToken=1&request=register-new";
+    foreach($_POST as $index=>$val){
+        $ar = explode($prfx,$index);
+        if(count($ar)){
+            $_EDIT[end($ar)] = $val;
+            if(!empty($ar[1])){
+                $get_str .= '&participant-'.@$ar[1].'='.urlencode($val);
+            }
+        }
+    }
+//    echo $get_str;
+    header("LOCATION: http://localhost/PMS/testapi.php".$get_str);
+    exit();
+}
+?> 
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#" class="no-js">
+<head>  
+<?php include 'includes/head-common.php';?>
+    <title>Privacy Policy - Transform Africa Summit 2017</title>	 
+    
+    <link rel="stylesheet" href="intlTelInput/build/css/intlTelInput.css">
+    <script src="intlTelInput/build/js/intlTelInput.js"></script>
+</head>
+<body class="home page page-id-2">
+    <?php include 'views/header-common1.php'?>
+	<div id="wrapper" class="home"> 
+        <div class="container-fluid">
+          <div class="row">
+              <img class="img img-responsive" src="<?=DN?>/img/header-1.jpg"/>
+          </div>
+        </div>
+        <section class="section-main white-bg">
+          <div class="home-section-text" style="padding: 10px 0;">
+                <img class="img img-responsive" src="<?=DN?>/img/holder.jpg"/>
+            </div>
+          <div class="container-fluid bg">
+            <div class="container white-bg">
+                <div class="register_layout" id="other" >
+                  <div class="text-left">   
+                      <h2 class="title text-center text-uppercase">Privacy Policy
+                       <span class="lnr lnr-chevron-right"></span> 
+                     </h2>
+                    <p class="text-center">Smart Africa Secretariat ("we" or "us") are committed to protecting and respecting your privacy. This privacy policy has been created in order to demonstrate our firm commitment to your privacy.
+						<br>
+						This policy (together with our terms of use) sets out the basis on which any personal data we collect from you, or that you provide to us, will be processed by us.</p><hr>
+					  <ol class="" style="line-height: 1.6;">
+						  <li><strong>Information we may collect from you</strong>
+							  We may collect and process the following data about you:
+							  <ul style="list-style-type: lower-alpha">
+								  <li>Information that you provide by filling in forms on our site. This includes information provided at the time of registering to use our site, subscribing to our services, requesting, applying for or entering further services (including, but not limited to, a conference, competition or promotion), making an enquiry or reporting a problem. This may include, but is not limited to, information such as your name, address, phone and email address. </li>
+								  <li>In order to improve our communications with you as well as improve our products and services, we may ask you to provide us with additional information about you such as your professional interests and your experiences with us as well as more detailed contact preferences. When you provide us with any personal information you consent to us collecting and using that information according to your preferences. </li>
+								  <li>If you contact us, we may keep a record of that correspondence.</li>
+								  <li>We may ask you to complete surveys that we use for research purposes, although you do not have to respond to them.</li>
+								  <li>Details of transactions you carry out through our site and of the fulfilment of your orders.</li>
+								  <li>Details of your visits to our site and the resources that you access and/or download.</li>
+							  </ul>
+						  </li>
+						  <br>
+						  <li><strong>IP addresses</strong><br>We may collect information about your computer, including where available your IP address, operating system and browser type for system administration. This is statistical data about our users' browsing actions and patterns, and does not identify any individual.</li><br>
+						  <li><strong>Cookies</strong><br>Our website uses cookies to distinguish you from other users of our website. This helps us to provide you with a good experience when you browse our website and also allows us to improve our site. For detailed information on the cookies we use and the purposes for which we use them please see our cookie policy.</li><br>
+						  <li><strong>Where we store your personal data</strong>
+							  <ul style="list-style-type: lower-alpha">
+								  <li>The data that we collect from you may be stored or transferred. It may also be processed by staff operating in different parts of the world who work for us or for one of our suppliers. Such staff may be engaged in, among other things, the fulfilment of your order, the processing of your payment details and the provision of support services. By submitting your personal data, you agree to this transfer, storing or processing. </li>
+								  <li>We will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this privacy policy.</li>
+								  <li>All information you provide to us is stored on our secure servers. Any payment transactions will be encrypted.</li>
+								  <li>Where we have given you (or where you have chosen) a password which enables you to access certain parts of our site, you are responsible for keeping this password confidential. We ask you not to share a password with anyone. </li>
+								  <li>Unfortunately, the transmission of information via the internet is not completely secure. Although we will do our best to protect your personal data, we cannot guarantee the security of your data transmitted to our site; any transmission is at your own risk. Once we have received your information, we will use strict procedures and security features to try to prevent unauthorised access. </li>
+							  </ul>
+						  </li><br>
+						  <li><strong>Uses made of the information</strong> 
+							  <ol>
+								  <li>We use information held about you in the following ways: 
+									  <ul style="list-style-type: lower-alpha">
+										  <li>To ensure that content from our site is presented in the most effective manner for you and for your computer.</li>
+										  <li>To provide you with information, products or services that you request from us or which we feel may interest you, where you have consented to be contacted for such purposes. </li>
+										  <li>To share with other companies within our group (as defined in clause 6.1 below) and reputable third organisations for marketing purposes provided we have your consent to do so. </li>
+										  <li>To notify you about changes or updates to our service.</li>
+										  <li>To carry out our obligations arising from any contracts entered into between you and us.</li>
+										  <li>To allow you to participate in interactive features of our service, when you choose to do so.</li>
+										  <li>If you are an existing customer, we will only contact you by electronic means (e-mail or SMS) with information about goods and services similar to those which were the subject of a previous sale to you or which you have shown an interest in. </li>
+										  <li>If you are a new customer, and where we permit selected third parties to use your data, we (or they) will contact you by electronic means only if you have consented to this. </li>
+									  </ul>
+								  </li>
+								  <li>If you do not want us to use your data in this way, or to pass your details on to third parties for marketing purposes, please tick the relevant box situated on the form on which we collect your data.</li>
+							  </ol>
+						  </li><br>
+						  <li><strong>Disclosure of your information</strong>
+							  <ol>
+								  <li>We may disclose your personal information to any of our subsidiaries, our parent company and any of our parent company's other subsidiaries ("our group"). </li>
+								  <li>We may disclose your personal information to third parties: 
+									  <ul style="list-style-type: lower-alpha">
+										  <li>In the event that we sell or buy any business or assets, in which case we may disclose your personal data to the prospective seller or buyer of such business or assets. </li>
+										  <li>If we or substantially all of our assets are acquired by a third party, in which case personal data held by it about its customers will be one of the transferred assets. </li>
+										  <li>If said third party provide services for us, limited to the following purposes: 
+											  <ol>
+												  <li>Understanding the use of our site and making improvements</li>
+												  <li>Administering a mailing list for customers that have registered for such list</li>
+												  <li>Responding to requests from or providing any necessary notices to you</li>
+												  <li>Protecting the security or integrity of our site</li>
+												  <li>Otherwise administering or managing our site software.</li>
+											  </ol>
+										  </li>
+										  <li>If we are under a duty to disclose or share your personal data in order to comply with any legal obligation, or in order to enforce or apply our terms of use and other agreements; or to protect the rights, property or safety of us, our customers, or others. This includes exchanging information with other companies and organisations for the purposes of fraud protection and credit risk reduction. </li>
+									  </ul>
+								  </li>
+							  </ol>
+						  </li><br>
+						  <li><strong>Your rights</strong>
+							  <ol>
+								  <li>You have the right to ask us not to process your personal data for marketing purposes. We will usually inform you (before collecting your data) if we intend to use your data for such purposes or if we intend to disclose your information to any third party for such purposes. You can exercise your right to prevent such processing by checking certain boxes on the forms we use to collect your data. You can also exercise the right at any time by contacting us using the contact information below. </li>
+								  <li>Our site may, from time to time, contain links to and from the websites of our partner networks, advertisers and affiliates. If you follow a link to any of these websites, please note that these websites have their own privacy policies and that we do not accept any responsibility or liability for these policies. Their inclusion cannot be taken to imply any endorsement or validation by us of the content of said website. </li>
+							  </ol>
+						  </li><br>
+						  <li><strong>Changes to our privacy policy</strong><br>
+							  In order to keep up with changing legislation and best practice, we may revise this Privacy Policy at any time without notice so please check back periodically so that you are aware of any changes. This Privacy Policy should be read in conjunction with and is subject to our Terms and conditions. 
+						  </li><br>
+						  <li><strong>Contact</strong>
+						  	<ol>
+							  <li>Questions, comments and requests regarding this privacy policy or your privacy are welcomed and should be addressed to: 
+								  	The Smart Africa Secretariat Data Manager<br>
+									9th Floor, Makuza Peace Plaza<br>
+									10, KN4 Avenue<br>
+									Kigali, Rwanda<br>
+									email: privacy@smartafrica.org  
+
+								</li>
+								<li>We endeavour to process all requests as promptly as practical, however please note that you may continue to receive existing communications for a transitional period whilst we update your preferences. 
+								</li>
+							</ol>
+						  </li>
+					  </ol>
+                   <hr class="hr-blue">
+                  </div>
+                </div>
+            </div>
+            <br>
+          </div>
+        </section>
+        <?php include 'views/social.php';?>            
+    </div><!--wrapper--> 
+    <?php include 'views/footer-common.php';?>
+</body>
+</html>

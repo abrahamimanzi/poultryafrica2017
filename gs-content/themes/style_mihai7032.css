@@ -1,0 +1,47 @@
+.elq-field .field-wrap textarea { border:solid 1px #999; width:100%; max-width:100%; }
+.elq-field .field-wrap textarea:focus { border: solid 2px #000045; }	
+.elq-field {margin-bottom:30px;}
+#elq-field-a0a819835583f7b, #elq-field-18c85f8a01a58ef, #elq-field-79abff24fa9b325, #elq-field-2cbab10bbb5a909 , #elq-field-bc1e6da43c871d8, #elq-field-a1368a8742ca14a, #elq-field-6b50518fd761d14, #elq-field-2eb1aac3f67ea5f, #elq-field-04f7d34a154d29e, #elq-field-9d5e631787fd464
+{width:100%;}
+#elq-field-5d1131726f65bce .option-list, #elq-15382 .option-list , #elq-15346 .option-list {width:50%; margin-bottom:25px;}
+.elq-field.invalid .message.IsRequiredCondition {position:absolute; top:75px; padding:3px 10px; font-style:normal;}
+.elq-field .message {border-radius:0;}
+
+.inside { padding-bottom:50px;}
+.inside p { font-size:17px; }
+
+
+
+.sponsors-logos img {width:30%; float:left; margin:10px; padding:10px; border:1px solid #ccc;}
+.elq-field .field-wrap.submit input[type="submit"] {     background-color: #f651f5;}
+.elq-field .field-wrap.reset input[type="submit"] {background-color: #000045;}
+.button {display:inline-block;}
+.button:before {position:absolute; top:14px;}
+.button span {display:block; padding-left:16px;}
+.video-js .vjs-tech {height:auto;}
+
+@media screen and (max-width: 650px)
+{
+	.sponsors-logos img {width:45%; float:left; margin:10px; padding:10px; border:1px solid #ccc;}
+/*	.wide-band { padding:5px;}*/
+	.wide-band h1 { line-height: 15px; font-size: 12px;}
+	#elq-field-5d1131726f65bce .option-list, #elq-15382 .option-list , #elq-15346 .option-list {width:100%; margin-bottom:25px;}
+
+	.landing-sub h2 {font-size:18px; line-height:22px; padding-top:5px;}
+	.inside a {word-break:break-word;}
+	.menu ul {height:50%;}
+	
+}
+@media screen and (max-width: 490px)
+{
+	.sponsors-logos img {width:45%; float:left; margin:5px; padding:10px; border:1px solid #ccc;}
+}
+
+/*
+
+#f1_container:hover #f1_card {
+  transform: rotateY(180deg);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.7);
+  border-bottom: 0.63px dashed #fff;
+  transition:  all 2s linear;
+}*/
